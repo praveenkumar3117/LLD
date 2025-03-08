@@ -128,3 +128,18 @@ SportsVehicle and OffRoadVehicle share the same type of drive function strategy 
 
 
 
+Another Example:
+Imagine you have a payment system in an e-commerce app. Customers can pay using:
+Credit Card
+PayPal
+Google Pay
+
+Instead of writing a long if-else block to handle different payment methods, you can use the Strategy Pattern:
+Define an interface for payment strategies.
+Implement different payment methods as separate classes.
+Select a strategy at runtime based on user input.
+
+
+
+
+
