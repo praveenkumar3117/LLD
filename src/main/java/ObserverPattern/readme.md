@@ -7,3 +7,6 @@ How It Works in Code:
 
 When to Use Observer Pattern?
 When you need to notify multiple objects about changes in another object.
+
+Here I have implemented a youtube notification feature that will notify the users
+when a new video is uploaded through phone or emailId.
