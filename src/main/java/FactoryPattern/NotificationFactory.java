@@ -9,6 +9,5 @@ public class NotificationFactory {
             case "Email" -> new EmailNotification();
             default -> new NullNotification();
         };
-
     }
 }
