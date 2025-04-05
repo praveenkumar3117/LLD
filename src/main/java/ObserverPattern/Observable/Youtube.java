@@ -8,6 +8,7 @@ public interface Youtube {
     void uploadNewVideo(String videoTitle);
     void notifySubscribers();
     String getVideoTitle();
+    String getName();
 
 
 }

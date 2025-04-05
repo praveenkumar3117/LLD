@@ -9,12 +9,13 @@ import ObserverPattern.Observer.Subscriber;
 public class Main {
     public static void main(String [] args)
     {
-        Youtube youtubeChannel = new YoutubeChannel();
+        Youtube youtubeChannel = new YoutubeChannel("R2H");
+        YoutubeChannel youtubeChannel1 = new YoutubeChannel("Carry Minati");
 
-        Subscriber phoneUser = new PhoneUser("9588338712", youtubeChannel);
-        Subscriber phoneUser1 = new PhoneUser("1234567890",youtubeChannel);
-        Subscriber emailUser = new EmailUser("sainipraveen@gmail.com",youtubeChannel);
-        Subscriber emailUser1 = new EmailUser("pk@gmail.com",youtubeChannel);
+        Subscriber phoneUser = new PhoneUser("9588338712");
+        Subscriber phoneUser1 = new PhoneUser("1234567890");
+        Subscriber emailUser = new EmailUser("sainipraveen@gmail.com");
+        Subscriber emailUser1 = new EmailUser("pk@gmail.com");
 
         //Adding subscribers to the channel
         youtubeChannel.add(phoneUser);
@@ -29,6 +30,11 @@ public class Main {
         youtubeChannel.remove(phoneUser);
         youtubeChannel.remove(emailUser1);
         youtubeChannel.notifySubscribers();
+
+
+        youtubeChannel1.add(phoneUser);
+
+        youtubeChannel1.uploadNewVideo("Kelllaaaaaaaa");
 
 
     }

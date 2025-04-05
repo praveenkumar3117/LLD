@@ -1,12 +1,23 @@
 package ObserverPattern.Observable;
 
 import ObserverPattern.Observer.Subscriber;
+import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class YoutubeChannel implements Youtube {
     private List<Subscriber> subscriberList = new ArrayList<>();
+
+
+    @Getter
+    private String name;
+    public YoutubeChannel(String name)
+    {
+        this.name=name;
+    }
+
+    @Getter
     private String videoTitle;
 
     public void add(Subscriber subscriber)
@@ -29,13 +40,8 @@ public class YoutubeChannel implements Youtube {
     {
         for(Subscriber sub : subscriberList)
         {
-            sub.update();
+            sub.update(this);
         }
-    }
-
-    public String getVideoTitle()
-    {
-        return this.videoTitle;
     }
 
 

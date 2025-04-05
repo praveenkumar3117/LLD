@@ -6,16 +6,17 @@ import ObserverPattern.Observable.YoutubeChannel;
 public class PhoneUser implements Subscriber{
 
     private String phoneNumber;
-    private Youtube youtubeChannel;
-    public PhoneUser(String phoneNumber, Youtube youtubeChannel)
+    public PhoneUser(String phoneNumber)
     {
         this.phoneNumber=phoneNumber;
-        this.youtubeChannel=youtubeChannel;
+
 
     }
 
     @Override
-    public void update() {
-        System.out.println("Hey phone user "+phoneNumber +" there is a new video" + youtubeChannel.getVideoTitle() + ", please check");
+    public void update(YoutubeChannel youtubeChannel) {
+
+        System.out.println("Hey phone user "+phoneNumber +" there is a new video" +  "on " + youtubeChannel.getName() +" " +youtubeChannel.getVideoTitle() + ", please check");
+
     }
 }
