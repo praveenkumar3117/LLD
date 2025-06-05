@@ -2,22 +2,23 @@ package SnakeAndLadder;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Random;
+import java.util.Scanner;
 
 public class MainMultiplayer {
 
-    public static void main(String [] args)
-    {
+    public static void main(String [] args) throws InterruptedException {
         Board board = new Board();
         Utility utility = new Utility(board);
         Dice dice = new Dice(6);
         Queue<Player> playerQueue= new LinkedList<>();
-        Player player1 = new Player("Praveen Saini");
-        Player player2 = new Player("Prem Dayal");
-        Player player3 = new Player("Aditya Seth");
-        playerQueue.add(player1);
-        playerQueue.add(player2);
-        playerQueue.add(player3);
+        Scanner scanner = new Scanner(System.in);
+        int totalPlayers = scanner.nextInt();
+        for(int i=0;i<totalPlayers;i++)
+        {
+            String playerName = scanner.next();
+            Player player = new Player(playerName);
+            playerQueue.add(player);
+        }
         Game game = new Game(board,utility,dice,playerQueue);
         game.start();
 

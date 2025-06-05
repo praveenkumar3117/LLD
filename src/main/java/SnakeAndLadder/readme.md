@@ -1,6 +1,13 @@
 This is a game of snake and ladders
 We have Board, Dice, Game, Player, Utility classes. All are simple and self-explanatory
 
+How to play this
+Run the MainMultiplier class
+and give total number of players followed by their name, space separated
+For e.g 
+input == 3 PraveenSaini AdityaSeth PremDayal
+
+
 We are initializing the ladders and snakes in Board constructor, for now I have hardcoded it. Later on I will inject them using constructor injection
 
 Dice contains the diceRange, and RollDice function
@@ -21,5 +28,4 @@ Later on i will enhance it
 Enhancement that can be made
 1. Live console board
 2. Results after game finishes
-3. Configuring players dynamically. (reading some json files or something else)
 4. Support multiple dice.

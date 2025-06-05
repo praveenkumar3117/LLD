@@ -15,10 +15,10 @@ public class Game {
         this.playerQueue = playerQueue;
     }
 
-    public void start()
-    {
+    public void start() throws InterruptedException {
         while(!playerQueue.isEmpty())
         {
+            Thread.sleep(1000);
             Player currentPlayer = playerQueue.poll();
             int currentPosition= currentPlayer.getPosition();
             System.out.println(currentPlayer.getName() + " current position is " + currentPosition);
@@ -39,7 +39,7 @@ public class Game {
                     }
                     else
                     {
-                        currentPlayer.setPosition(utility.calculateNextPosition(currentPlayer,diceRoll));
+                        utility.calculateNextPosition(currentPlayer,diceRoll);
                         if(currentPlayer.getPosition()==100)
                         {
                             break;
@@ -49,7 +49,7 @@ public class Game {
                 }
                 else
                 {
-                    currentPlayer.setPosition(utility.calculateNextPosition(currentPlayer,diceRoll));
+                    utility.calculateNextPosition(currentPlayer,diceRoll);
                     break;
                 }
             }

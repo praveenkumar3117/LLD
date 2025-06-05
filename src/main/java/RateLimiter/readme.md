@@ -3,7 +3,6 @@ This rate limiter have design for 2 types of limiter
 2. TokenBucket
 
 I have implemented strategy pattern also making two different strategies and a common interface
-I have also implemented factory pattern which allows to choose the type of strategy used on the basis of user input
 
 
 
